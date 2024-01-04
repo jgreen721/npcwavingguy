@@ -1,0 +1,43 @@
+.app {
+  height: 100vh;
+  width: 100vw;
+  color: white;
+}
+
+.quiz-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: 5rem 2rem;
+  color: white;
+  font-size: 2rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+h1 {
+  max-width: 300px;
+  transform: translateX(-500px);
+  animation: slideover 1s var(--delay) forwards;
+}
+
+h1:nth-child(1) {
+  --delay: 0.5s;
+}
+
+h1:nth-child(2) {
+  --delay: 1s;
+}
+
+h1:nth-child(3) {
+  --delay: 1.5s;
+}
+
+@keyframes slideover {
+  50% {
+    transform: translateX(2rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
